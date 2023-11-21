@@ -1,8 +1,8 @@
 
-{
+// Main Wallpaper
 let slideIndex = 1;
 showSlides(slideIndex);
-}
+
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -30,3 +30,26 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+function validateForm(){
+  const name = document.forms["message-form"]["full-name"].value;
+  const birthDate = document.forms["message-form"]["birth-date"].value;
+  const gender = document.forms["message-form"]["gender"].value;
+  const messages = document.forms["message-form"]["message"].value;
+
+  if (name == "" || birthDate == "" || gender == "" || messages == ""){
+    alert("Tidak boleh ada yang kosong");
+    return false;
+  }
+  setSenderUI(name, birthDate, gender, messages);
+  return false;
+
+}
+
+function setSenderUI(name, birthDate, gender, messages){
+  document.getElementById("sender-full-name").innerHTML = name;
+  document.getElementById("sender-birth-date").innerHTML = birthDate;
+  document.getElementById("sender-gender").innerHTML = gender;
+  document.getElementById("sender-messages").innerHTML = messages;
+}
+

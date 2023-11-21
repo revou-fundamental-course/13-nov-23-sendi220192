@@ -12,9 +12,9 @@
         <section class="navigation-header">
             <a href="">LOGO</a>
             <nav class="navigation">
-                <a href="">Home</a>
-                <a href="">Our Package</a>
-                <a href="">Call Us</a>
+                <button>Home</button>
+                <button>Our Package</button>
+                <button>Call Us</button>
             </nav>
            
         </section>
@@ -96,15 +96,34 @@
         <section class="message-us">
             <h4>Contact Us</h4>
             <h5>sales akan menghubungi anda</h5>
-            <form>
-                <label for="name-input">First Name</label>
-                <input id="name-input" type="text" placeholder="first and last name">
-                <p><label for="email-input">Email</label>
-                <input id="email-input" type="text" placeholder="example@email.com"></p>
-                <p><label for="Phone-input">Phone</label>
-                <input id="Phone" type="text" placeholder="Phone number"></p>
-                <button type="button" class="primary-button">Submit</button>
+            
+            <form name="messages-form" onsubmit="return validateForm()">
+              Nama: <input placeholder="first and last name" type="text" name="full-name"/>
+              <br />
+
+              Tanggal Lahir: 
+              <input type="date" name="birth-date " />
+              <br />
+
+              Jenis Kelamin:
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">laki-laki</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female" >Perempuan</label>
+
+              Pesan:
+              <textarea placeholder="pesan" name="messages"></textarea>
+              <br />
+
+              <input type="submit" value="Submit" />
             </form>
+
+            <div>
+              <p>Nama: <span id="sender-full-name"></span> </p>
+              <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+              <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+              <p>Pesan: <span id="sender-messages"></span></p>
+            </div>
         </section>
     </main>
 </body>
