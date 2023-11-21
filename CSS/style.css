@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     height: min-content;
-    border-color: aqua;
+    border-color: rgb(0, 255, 42);
 }
 
 .navigation-header a{
@@ -21,6 +21,26 @@
     text-decoration: none ;
 }
 
+.btn-group button {
+  background-color: rgb(18, 13, 14);
+  border: 1px solid rgb(9, 6, 7);
+  color: blue;
+  padding: 10px 24px;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group button:not(:last-child){
+  border-right: none;
+}
+.btn-group::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-group button:hover{
+  background-color: #08e508;
+}
 .title-header {
     display: flex;
     flex-direction: column;
