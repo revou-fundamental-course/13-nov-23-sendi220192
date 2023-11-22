@@ -39,7 +39,7 @@ function validateForm(){
   const gender = document.forms["message-form"]["gender"].value;
   const messages = document.forms["message-form"]["messages"].value;
 
-  if (name == "" || email == "" || birthDate == "" || gender == "" || messages == ""){
+  if (name === "" || email === "" || birthDate === "" || gender === "" || messages === ""){
     alert("Tidak boleh ada yang kosong");
     return false;
   }
