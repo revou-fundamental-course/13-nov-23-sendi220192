@@ -57,6 +57,6 @@ function setSenderUI(name, email, birthDate, gender, messages){
   document.getElementById("sender-gender").innerHTML = gender;
   document.getElementById("sender-messages").innerHTML = messages;
 }
-document.getElementById('submit').addEventListener("click", function() {const name = nameInput.value
-document.getElementById('name').innerHTML = nama })
+
+
 
