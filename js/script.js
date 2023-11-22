@@ -16,7 +16,7 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
+  let dots = document.getElementsByClassName("cursor");
   let captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -43,16 +43,20 @@ function validateForm(){
     alert("Tidak boleh ada yang kosong");
     return false;
   }
+
   setSenderUI(name, email, birthDate, gender, messages);
+
   return false;
 
 }
 
-function setsenderUI(name, email, birthDate, gender, messages){
+function setSenderUI(name, email, birthDate, gender, messages){
   document.getElementById("sender-full-name").innerHTML = name;
   document.getElementById("sender-email").innerHTML = email;
   document.getElementById("sender-birth-date").innerHTML = birthDate;
   document.getElementById("sender-gender").innerHTML = gender;
   document.getElementById("sender-messages").innerHTML = messages;
 }
+document.getElementById('submit').addEventListener("click", function() {const name = nameInput.value
+document.getElementById('name').innerHTML = nama })
 

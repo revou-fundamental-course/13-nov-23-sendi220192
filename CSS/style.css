@@ -48,11 +48,10 @@
     justify-content: space-between;
 }
 
-@media only screen and {max-width: 900px;}
-  .btn-group{
-    flex-direction: row;
-  }
-
+@media only screen and (min-width: 1200px)
+{
+  .btn-group button {flex-direction: column;}
+}
 /* mark main */
 
 #main-section{

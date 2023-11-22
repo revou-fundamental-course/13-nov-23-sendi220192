@@ -13,9 +13,9 @@
         <section class="navigation-header">
             <img src="assets/logo.jpg" style="width: 5%;">
             <nav class="btn-group">
-                <button style="border-color: blue; color: blue;">Home</button>
-                <button style="border-color: blue; color: blue;">Our Package</button>
-                <button style="border-color: blue; color: blue;" >Call Us</button>
+                <button type="button" onclick="alert('page on progress!')" style="border-color: blue; color: blue;">Home</button>
+                <button type="button" onclick="alert('page on progress!')" style="border-color: blue; color: blue;">Our Package</button>
+                <button type="button" onclick="alert('page on progress!')" style="border-color: blue; color: blue;" >Call Us</button>
             </nav>
         </section>
       </div>
@@ -101,7 +101,7 @@
             <h5 style="font-size: larger;">Sales akan menghubungi anda 1x24 jam setelah data kami terima</h5>
             
             <form name="message-form" onsubmit="return validateForm()">
-              Nama: <input placeholder="first and last name" type="text" name="full-name"/>
+              Nama: <input placeholder="first and last name" type="text" name="full-name" />
               <br />
 
               Email: <input placeholder="example@email" type="text" name="Email"/>
@@ -114,7 +114,7 @@
               Jenis Kelamin:
               <input type="radio" id="male" name="gender" value="male" />
               <label for="male">laki-laki</label>
-              <input type="radio" id="female" name="gender" value="male" />
+              <input type="radio" id="female" name="gender" value="female" />
               <label for="female" >Perempuan</label>
 
               Pesan:
@@ -151,7 +151,7 @@
         </pre>
       </ol> 
     </div>
-    <footer style="font-style: italic;">@Copy right 2023</footer>
+    <footer style="font-style: italic;">New ID Travel@Copy right 2023</footer>
     <script src="js/script.js"></script>
 </body>
 </html>
