@@ -48,7 +48,7 @@ function validateForm(){
 
 }
 
-function setSenderUI(name, email, birthDate, gender, messages){
+function setsenderUI(name, email, birthDate, gender, messages){
   document.getElementById("sender-full-name").innerHTML = name;
   document.getElementById("sender-email").innerHTML = email;
   document.getElementById("sender-birth-date").innerHTML = birthDate;
