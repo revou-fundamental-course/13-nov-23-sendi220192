@@ -7,13 +7,14 @@
     
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body style="background-color:lightblue;">
     <header>
       <div style="background-color:rgb(232, 8, 8);color:rgba(255, 255, 255, 0.923);padding:auto;">
         <section class="navigation-header">
             <img src="assets/logo.jpg" style="width: 5%;">
             <nav class="btn-group">
-              <a href="anotherpage.html">
+              <a href="Movepage.html">
                 <button style="border-color: blue; color: blue;">Home</button>
                 <button style="border-color: blue; color: blue;">Our Package</button>
                 <button style="border-color: blue; color: blue;" >Call Us</button>
@@ -28,132 +29,142 @@
         </section>
         </div>
     </header>
+
     <main id="main-section">
-        <section><!-- Container for the image gallery -->
-            <div class="container">
-            
-              <!-- Full-width images with number text -->
-              <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                  <img src="assets/peakpx.jpg" style="width:100%">
+      <section class="review-section">
+          <div class="slider">
+              <div id="img">
+                  <img src="assets/CandiPR.jpg">
               </div>
-            
-              <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                  <img src="assets/prambanan.jpg" style="width:100%">
-              </div>
-            
-              <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                  <img src="assets/Borobudur.jpg" style="width:100%">
-              </div>
-            
-              <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                  <img src="assets/pure.jpeg" style="width:100%">
-              </div>
-            
-              <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                  <img src="assets/pure1.jpeg" style="width:100%">
-              </div>
-            
-              <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                  <img src="assets/pure2.jpg" style="width:100%">
-              </div>
-            
-              <!-- Next and previous buttons -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            
-              <!-- Image text -->
-              <div class="caption-container">
-                <p id="caption"></p>
-              </div>
-            
-              <!-- Thumbnail images -->
-              <div class="row">
-                <div class="column">
-                  <img class="demo cursor" src="assets/peakpx.jpg" style="width:100%"  onclick="currentSlide(1)" alt="BOROBUDUR">
-                </div>
-                <div class="column">
-                  <img class="cursor" src="assets/prambanan.jpg" style="width:100%" onclick="currentSlide(2)" alt="PRAMBANAN">
-                </div>
-                <div class="column">
-                  <img class="cursor" src="assets/Borobudur.jpg" style="width:100%" onclick="currentSlide(3)" alt="BOROBUDUR">
-                </div>
-                <div class="column">
-                  <img class="cursor" src="assets/pure.jpeg" style="width:100%" onclick="currentSlide(4)" alt="PURE BALI">
-                </div>
-                <div class="column">
-                  <img class="cursor" src="assets/pure1.jpeg" style="width:100%" onclick="currentSlide(5)" alt="PURE BALI">
-                </div>
-                <div class="column">
-                  <img class="cursor" src="assets/pure2.jpg" style="width:100%" onclick="currentSlide(6)" alt="BOROBUDUR">
-                </div>
-              </div>
-            </div>
-            <section>
-                <h4 style="color: red;">I like to go to this borobudur using New ID Travel agent</h4>
-            </section>
-        </section>
-        <section class="message-us">
-            <h4 style="font-size: 200%;">Contact Us </h4>
-            <h5 style="font-size: larger;">Sales akan menghubungi anda 1x24 jam setelah data kami terima</h5>
-            
-            <form name="message-form" onsubmit="return validateForm()">
-              Nama: <input placeholder="first and last name" type="text" name="full-name" />
-              <br />
+          </div>
 
-              Email: <input placeholder="example@email" type="text" name="Email"/>
-              <br />
+          <br>
+          <div class="review-message">
+              <q>My weekend became enjoyable because of my travel
+                  agent</q>
+          </div>
 
-              Tanggal Lahir: 
-              <input type="date" name="birth-date " />
-              <br />
+          <div class="review-profile">
+              <div>
+                  <img style="border-radius: 50%;width: 70px;margin-top: 7px;" src="assets/gunnung.png">
+              </div>
+              <div>
+                  <strong>
+                      <p>Raflesia</p>
+                  </strong>
+                  <em>
+                      <p>Housewife, 25</p>
+                  </em>
+                  <hr>
+              </div>
 
-              Jenis Kelamin:
-              <input type="radio" id="male" name="gender" value="male" />
-              <label for="male">laki-laki</label>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="female" >Perempuan</label>
+          </div>
 
-              Pesan:
-              <textarea placeholder="pesan" name="messages"></textarea>
-              <br />
+          <div class="review-benefit">
+              <p>NEW ID Travel agents provide many discounts on travel tickets so you can get cheaper prices
+                  compared to other travel agents. Apart from that, New ID Travel agents have additional
+                  advantages, that is:</p>
+              <ol>
+                  <li>Provides many countries that you can visit</li>
+                  <li>You can get various bonuses if you buy more than 3 travel tickets</li>
+                  <li>You can hire a tour guide at a cheaper price if you rent on the weekend</li>
+              </ol>
+          </div>
+      </section>
 
-              <input type="submit" value="Submit" />
-            </form>
+      <section class="message-us">
+          <div class="form-header">
+              <h3>Contact Us</h3>
+              <h5>Sales will contact you 1x24 hours after we receive the data</h5>
+              <br>
+          </div>
+          <form class="input-message-us" name="form-input" onsubmit="return validateForm()">
+              <label>Your Name:</label>
+              <input class="text-input" id="name-input" type="text" placeholder="First and Last Name"
+                  name="name-input">
+              <h6 id="error-name"></h6>
+              <br>
+              <label>Email Address:</label>
+              <input class="text-input" id="email-input" type="email" placeholder="example@gmail.com"
+                  name="email-input">
+              <h6 id="error-email"></h6>
+              <br>
+              <label>What are you interested in?</label>
+              <select class="text-input" name="select-input">
+                  <option disabled selected id="default-select" hidden value="">Select option</option>
+                  <option value="Software Engineering">Software Engineering</option>
+                  <option value="Graphic Designer">Graphic Designer</option>
+                  <option value="Motion Graphic">Motion Graphic</option>
+                  <option value="DevOps Engineer">DevOps Engineer</option>
+              </select>
+              <h6 id="error-select"></h6>
+              <br>
+              <button type="submit" class="send-button" value="submit">SEND</button>
+          </form>
+      </section>
 
-            <div>
-              <p>Nama : <span id="sender-full-name"></span> </p>
-              <p>Email : <span id="sender-email"></span> </p>
-              <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
-              <p>Jenis Kelamin: <span id="sender-gender"></span></p>
-              <p>Pesan  : <span id="sender-messages"></span></p>
-            </div>
-        </section>
-    </main>
-    <div>
-      <h3>
-        <pre>
-          Use this space to provide users with more information
-          about your offer. Consider it a follow-up to your headline
-          and explain the benefits of your service or product 
-        </pre>
-      </h3>
-    </div>
-    <div>
-      <ol>
-        <pre>
-        <li>Your first feature, written in the form of a benefit statement</li>
-        <li>your second feature, written in the form of a benefit statement</li>
-        <li>your third feature, written in the form of a benefit statement</li>
-        </pre>
-      </ol> 
-    </div>
-    <footer style="font-style: italic;">New ID Travel@Copy right 2023</footer>
+      <section id="package-title">
+          <h2>Your Destination</h2>
+      </section>
+
+      <section class="package">
+          <ul>
+              <li>
+                  <img class="package-img" src="assets/logo.jpg">
+                  <span><strong>Yogyakarta</strong></span>
+                  <p>travel and tourism in Yogyakarta, visit cultural heritage sites
+              </li>
+              <li><img class="package-img" src="assets/logo.jpg">
+                  <span><strong>Solo</strong></span>
+                  <p>travel and tourism in Solo, visit cultural heritage
+              </li>
+              <li> <img class="package-img" src="assets/logo.jpg">
+                  <span><strong>Surabaya</strong></span>
+                  <p>travel and tourism in Surabaya, visit cultural heritage sites and interesting culinary delights
+                  </p>
+              </li>
+              <span style="margin: 100px 0px;"></span>
+              <li> <img class="package-img" src="assets/logo.jpg">
+                  <span><strong>Bandung</strong></span>
+                  <p>travel and tourism in Bandung, visit cultural heritage sites and interesting culinary delights
+                  </p>
+              </li>
+              <li><img class="package-img" src="assets/logo.jpg">
+                  <span><strong>Bali</strong></span>
+                  <p>travel and tourism in Bali, visit cultural heritage sites and interesting culinary delights
+                  </p>
+              </li>
+              <li><img class="package-img" src="assets/logo.jpg">
+                  <span><strong>Toraja</strong></span>
+                  <p>travel and tourism in Toraja, visit cultural heritage sites and interesting culinary delights
+                  </p>
+              </li>
+          </ul>
+      </section>
+      <hr>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-section">
+      <h2>Thank you for staying so long with us !!!</h2>
+      <p>Thank you for using our service, We really
+          appreciate spending time with
+          you. If
+          you have any questions, you
+          can contact us!</p>
+          <a href="Movepage.html">
+      <button class="call-button">PUSH BUTTON</button>
+          </a>
+      <hr>
+      <img class="logo" style="height: 30px;margin:20px 0px 0px 0px;" src="assets/logo.jpg">
+
+      <div class="service-policy">
+          <h5>Terms of Service</h5>
+          <h5>Privacy Policy</h5>
+      </div>
+
+     <h5 style="margin:0;" font-style: italic;">New ID Travel@Copy right 2023</h5>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

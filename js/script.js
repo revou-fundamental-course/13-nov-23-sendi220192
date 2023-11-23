@@ -1,62 +1,62 @@
+var img = document.getElementById("img");
 
-// Main Wallpaper
-let slideIndex = 1;
-showSlides(slideIndex);
+var slides = [
+  "assets/Borobudur.jpg",
+  "assets/prambanan.jpg",
+  "assets/CandiPR.jpg",
+  "assets/Pantai.jpg",
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("cursor");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
   
+];
+
+var Start = 0;
+
+function slider() {
+  if (Start < slides.length) {
+    Start = Start + 1;
+  } else {
+    Start = 1;
+  }
+  console.log(img);
+  img.innerHTML = "<img src=" + slides[Start - 1] + ">";
 }
+setInterval(slider, 4000);
 
-function validateForm(){
-  const name = document.forms["message-form"]["full-name"].value;
-  const email = document.forms["message-form"]["email"].value;
-  const birthDate = document.forms["message-form"]["birth-date"].value;
-  const gender = document.forms["message-form"]["gender"].value;
-  const messages = document.forms["message-form"]["messages"].value;
+function validateForm() {
+  const name = document.forms["form-input"]["name-input"].value;
+  const email = document.forms["form-input"]["email-input"].value;
+  const option = document.forms["form-input"]["select-input"].value;
 
-  if (name === "" || email === "" || birthDate === "" || gender === "" || messages === ""){
-    alert("Tidak boleh ada yang kosong");
-    return false;
+  if (name == "") {
+    document.getElementById("error-name").innerHTML = "Name cannot be empty";
+    document.getElementById("error-name").style.color = "crimson";
+  } else {
+    document.getElementById("error-name").innerHTML = "";
   }
 
-  setSenderUI(name, email, birthDate, gender, messages);
+  if (email == "") {
+    document.getElementById("error-email").innerHTML = "Email cannot be empty";
+    document.getElementById("error-email").style.color = "crimson";
+  } else {
+    document.getElementById("error-email").innerHTML = "";
+  }
+
+  if (option == "") {
+    document.getElementById("error-select").innerHTML =
+      "Selection cannot be empty";
+    document.getElementById("error-select").style.color = "crimson";
+  } else {
+    document.getElementById("error-select").innerHTML = "";
+    document.getElementById("default-select").innerHTML = "Select Option";
+  }
 
   return false;
-
 }
 
-function setSenderUI(name, email, birthDate, gender, messages){
-  document.getElementById("sender-full-name").innerHTML = name;
-  document.getElementById("sender-email").innerHTML = email;
-  document.getElementById("sender-birth-date").innerHTML = birthDate;
-  document.getElementById("sender-gender").innerHTML = gender;
-  document.getElementById("sender-messages").innerHTML = messages;
+function clearField() {
+  document.getElementById("error-name").innerHTML = "";
+  document.getElementById("error-email").innerHTML;
+  document.getElementById("error-select").innerHTML = "";
+  document.getElementById("default-select").innerHTML = "Select Option";
 }
-
-
 
